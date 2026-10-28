@@ -1,0 +1,8 @@
+# VindexAV Known Hash Signatures
+# Format: hash,family,severity
+44d88612fea8a8f36de82e1278abb02f,EICAR-Standard-Test,malicious
+275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f,EICAR-Standard-Test,malicious
+09a0815e692e4a410ad4f7438510b900,WannaCry.Mock,malicious
+ed01ebfbc9eb5bbea545af4d01bf5f1071661840480439c6e5babe8e080e41aa,WannaCry.Mock,malicious
+512301c535c88255c9a252fdf06156c3,TrickBot.Mock,malicious
+d3027b4b39a66d581177b94b0d068cb103c00c7cb992dd0f21526685ce0f1ad9,Emotet.Mock,malicious

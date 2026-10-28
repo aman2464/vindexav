@@ -1,0 +1,40 @@
+# Python & Virtual Environments
+.venv/
+venv/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+
+# PyInstaller & Build Output
+build/
+dist/
+*.spec
+
+# Electron & Node
+node_modules/
+dashboard/dist/
+dashboard/dist-installers/
+dist-installers/
+
+# Exclude all .deb, .tar.gz, .zip installers across all folders
+*.deb
+*.tar.gz
+*.tar.xz
+*.zip
+*.bin
+
+# Local Database, Vault & Runtime Logs
+*.db
+*.sqlite3
+logs/
+*.log
+quarantine_vault/
+quarantine.key
+
+# Local Environment Variables & Caches
+.env
+.env.local
+.vercel/
+.DS_Store

@@ -1,0 +1,62 @@
+{
+  "name": "vindexav",
+  "version": "1.0.0",
+  "description": "VindexAV - Endpoint Security Console & Detection Engine",
+  "author": "VindexAV Team <support@vindexav.local>",
+  "homepage": "https://vindexav.local",
+  "main": "electron-main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron:dev": "concurrently \"npm run dev\" \"electron .\"",
+    "dist:linux": "vite build && electron-builder --linux deb"
+  },
+  "dependencies": {
+    "lucide-react": "^0.344.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.19",
+    "concurrently": "^8.2.2",
+    "electron": "^29.1.0",
+    "electron-builder": "^26.18.0",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "vite": "^5.2.0"
+  },
+  "build": {
+    "appId": "com.vindexav.app",
+    "productName": "VindexAV",
+    "directories": {
+      "output": "../dist-installers"
+    },
+    "files": [
+      "dist/**/*",
+      "electron-main.js",
+      "preload.js",
+      "public/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "../dist/vindexav-core",
+        "to": "vindexav-core",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "category": "Utility",
+      "maintainer": "VindexAV Team <support@vindexav.local>"
+    },
+    "deb": {
+      "priority": "optional"
+    }
+  }
+}

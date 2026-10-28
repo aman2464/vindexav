@@ -1,0 +1,35 @@
+{
+  "vault_dir": "quarantine_vault",
+  "key_file": "quarantine.key",
+  "db_file": "vindexav.db",
+  "log_file": "logs/vindexav.log",
+  "signatures_file": "signatures/known_hashes.txt",
+  "yara_rules_dir": "rules",
+  "watch_dirs": [
+    "test_folder"
+  ],
+  "thresholds": {
+    "suspicious": 50,
+    "malicious": 80
+  },
+  "scores": {
+    "high_entropy": 30,
+    "extension_mismatch": 25,
+    "double_extension": 20,
+    "suspicious_strings": 15,
+    "pe_anomalies": 35
+  },
+  "entropy_cutoff": 7.2,
+  "max_scan_size_mb": 100,
+  "excluded_extensions": [
+    ".iso",
+    ".vmdk",
+    ".dmg"
+  ],
+  "excluded_paths": [
+    "quarantine_vault",
+    ".git",
+    "node_modules",
+    ".venv"
+  ]
+}
